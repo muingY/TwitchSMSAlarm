@@ -1,0 +1,8 @@
+{
+  "APIKey": "***SOLAPI API key**&",
+  "APISecret": "***SOLAPI secret key",
+  "Protocol": "https",
+  "Domain": "api.solapi.com",
+  "Prefix": "",
+  "AppId": ""
+}
