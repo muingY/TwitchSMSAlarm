@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func getTwitchAcessToken(clientId string, clientSecret string) string {
+func GetTwitchAcessToken(clientId string, clientSecret string) string {
 	url := "https://id.twitch.tv/oauth2/token?client_id=" + clientId + "&client_secret=" + clientSecret + "&grant_type=client_credentials"
 	reqBody := bytes.NewBufferString("Post")
 	resp, err := http.Post(url, "", reqBody)
@@ -62,7 +62,7 @@ func main() {
 
 	client := solapi.NewClient()
 	fmt.Println("> Initialize solapi done.")
-	twitchToken := getTwitchAcessToken("***Twitch console client id***", "***Twitch console client secret key***")
+	twitchToken := GetTwitchAcessToken("***Twitch console client id***", "***Twitch console client secret key***")
 	fmt.Println("> Generate twitch access token done.")
 
 	fmt.Println("> Start watching...")
@@ -79,8 +79,8 @@ func main() {
 				fmt.Println(" > GangG stream on!")
 
 				message := make(map[string]interface{})
-				message["to"] = "***발신 전화번호***"
-				message["from"] = "***수신 전화번호***"
+				message["to"] = "***수신 전화번호***"
+				message["from"] = "***발신 전화번호***"
 				message["text"] = "강지 방송이 시작대떠!"
 				message["type"] = "SMS"
 
