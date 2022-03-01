@@ -10,9 +10,10 @@ import (
 	"time"
 )
 
-func GetTwitchAcessToken(clientId string, clientSecret string) string {
+func getTwitchAcessToken(clientId string, clientSecret string) string {
 	url := "https://id.twitch.tv/oauth2/token?client_id=" + clientId + "&client_secret=" + clientSecret + "&grant_type=client_credentials"
 	reqBody := bytes.NewBufferString("Post")
+
 	resp, err := http.Post(url, "", reqBody)
 	if err != nil {
 		panic(err)
@@ -46,6 +47,9 @@ func GetStreamerLiveB(clientId string, twitchAccessTocken string, streamerId str
 	bytes, _ := ioutil.ReadAll(resp.Body)
 	str := string(bytes)
 
+	//fmt.Println(str)
+	str = str[strings.Index(str, "\""+streamerId+"\""):]
+
 	if strings.Contains(str, "is_live") {
 		pos := strings.Index(str, "is_live") + 9
 		str = str[pos : pos+5]
@@ -62,7 +66,7 @@ func main() {
 
 	client := solapi.NewClient()
 	fmt.Println("> Initialize solapi done.")
-	twitchToken := GetTwitchAcessToken("***Twitch console client id***", "***Twitch console client secret key***")
+	twitchToken := getTwitchAcessToken("***twitch console client key***", "***twitch console secret key***")
 	fmt.Println("> Generate twitch access token done.")
 
 	fmt.Println("> Start watching...")
@@ -70,7 +74,7 @@ func main() {
 	var bLive bool = false
 	var bSwitch bool = false
 	for {
-		bLive = GetStreamerLiveB("***Twitch console client id***", twitchToken, "rkdwl12")
+		bLive = GetStreamerLiveB("***twitch console client key***", twitchToken, "rkdwl12")
 
 		if bLive {
 			if !bSwitch {

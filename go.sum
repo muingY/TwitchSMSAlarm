@@ -1,9 +1,2 @@
-github.com/golang-jwt/jwt/v4 v4.0.0 h1:RAqyYixv1p7uEnocuy8P1nru5wprCh/MH2BIlW5z5/o=
-github.com/golang-jwt/jwt/v4 v4.0.0/go.mod h1:/xlHOz8bRuivTWchD4jCa+NbatV+wEUSzwAxVc6locg=
-github.com/golang-jwt/jwt/v4 v4.3.0 h1:kHL1vqdqWNfATmA0FNMdmZNMyZI1U6O31X4rlIPoBog=
-github.com/golang-jwt/jwt/v4 v4.3.0/go.mod h1:/xlHOz8bRuivTWchD4jCa+NbatV+wEUSzwAxVc6locg=
-github.com/nicklaw5/helix v1.25.0 h1:Mrz537izZVsGdM3I46uGAAlslj61frgkhS/9xQqyT/M=
-github.com/nicklaw5/helix/v2 v2.3.0 h1:smh3HcJJeoPQ+9x2Brp1iQiKbAqvvrue/xXV6p8s2x4=
-github.com/nicklaw5/helix/v2 v2.3.0/go.mod h1:0ONzvVi1cH+k3a7EDIFNNqxfW0podhf+CqlmFvuexq8=
 github.com/solapi/solapi-go v0.0.0-20210702030642-9c9f1d2ee470 h1:0FHisAeDQH+UY+zpDXlwgOJ9qAXfKH4NqMEN4ec254Q=
 github.com/solapi/solapi-go v0.0.0-20210702030642-9c9f1d2ee470/go.mod h1:jRSwb5YRLT/HWWCaeOfVaRgQA1quMEsQw+GG3Mvsaxo=
